@@ -41,11 +41,6 @@ db.run(createTableQuery, (err) => {
   }
 });
 
-var options = {
-  key: fs.readFileSync('./client-key.pem'),
-  cert: fs.readFileSync('./client-cert.pem')
-};
-
 // Function to generate a random post
 function generatePost() {
   const randomSeed = Math.floor(Math.random() * 9000) + 1000; // 4 digit random number
